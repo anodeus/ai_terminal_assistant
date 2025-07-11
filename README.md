@@ -29,11 +29,15 @@ Go to the project directory
 ```bash
   cd ai_terminal_assistant
 ```
-
 Install dependencies
 
 ```bash
   ./install.sh 
+```
+Give execute permissions
+
+```bash
+  chmod +x ait.py
 ```
 
 Run Assistant
@@ -49,13 +53,14 @@ Run Assistant
 python3 -m venv aienv
 source aienv/bin/activate
 pip install -r requirements.txt
+chmod +x ait.py
 ./ait.py chat
 ```
 Give permission to install dependencies if above command not work
 ```bash
   chmod +x install.sh
 ```
-Try `bash install.sh` if ./install.sh not work
+Try `bash install.sh` if `./install.sh` not work
 
 ## Configuration
 
