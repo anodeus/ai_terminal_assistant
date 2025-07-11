@@ -51,7 +51,11 @@ source aienv/bin/activate
 pip install -r requirements.txt
 ./ait.py chat
 ```
-
+Give permission to install dependencies if above command not work
+```bash
+  chmod +x install.sh
+```
+Try `bash install.sh` if ./install.sh not work
 
 ## Configuration
 
