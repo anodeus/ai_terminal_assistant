@@ -98,7 +98,7 @@ To run this project, you need to set the following API keys in your config file 
 These are stored in `~/.ait.yml`, not in a `.env` file.
 
 
-## API (CLI) Reference
+## CLI Command Reference
 
 | Command | Description | Example |
 |---------|-------------|---------|
