@@ -34,6 +34,8 @@ Install dependencies
 ```bash
   ./install.sh 
 ```
+Try `bash install.sh` if `./install.sh` not work
+
 Give execute permissions
 
 ```bash
