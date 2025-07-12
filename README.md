@@ -9,11 +9,11 @@ It acts as a lightweight assistant powered by OpenAI and Google Gemini — bundl
 
 ## Tech Stack
 
-**Client / CLI:** Python 3.9+, [Rich](https://rich.readthedocs.io)
+**Client / CLI:** Python 3.9+, [Rich](https://rich.readthedocs.io), [argparse](https://docs.python.org/3/library/argparse.html)
 
 **LLM Back‑ends:** [OpenAI API](https://platform.openai.com/), [Google AI Gemini](https://ai.google.dev/)
 
-**System Utilities:** [psutil](https://pypi.org/project/psutil/), [requests](https://pypi.org/project/requests/), [BeautifulSoup4](https://pypi.org/project/beautifulsoup4/)
+**System Utilities:** [psutil](https://pypi.org/project/psutil/), [requests](https://pypi.org/project/requests/), [BeautifulSoup4](https://pypi.org/project/beautifulsoup4/), [hashlib](https://docs.python.org/3/library/hashlib.html), [socket](https://docs.python.org/3/library/socket.html), [shutil](https://docs.python.org/3/library/shutil.html), [subprocess](https://docs.python.org/3/library/subprocess.html), [os](https://docs.python.org/3/library/os.html), [platform](https://docs.python.org/3/library/platform.html)
 
 
 ## Installation
