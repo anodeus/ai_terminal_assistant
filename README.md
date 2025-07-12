@@ -108,6 +108,26 @@ These are stored in `~/.ait.yml`, not in a `.env` file.
 | `file find <pattern>` | Recursively search for files | `file find notes.txt` |
 | `search <query>` | DuckDuckGo quick search | `search Kali Linux tips` |
 
+| Command                                     | Description                                                 | Example                        |
+| ------------------------------------------- | ----------------------------------------------------------- | ------------------------------ |
+| `./ait.py chat`                             | Interactive chat with the configured LLM (Gemini or OpenAI) | `./ait.py chat`                |
+| `health` / `battery` / `sys`                | Show system health (CPU, memory, battery, disk)             | `health`                       |
+| `show ps` / `ps scan`                       | List or scan running processes                              | `ps scan`                      |
+| `file find <name>` / `find file <name>`     | Recursively search for files by name                        | `file find notes.txt`          |
+| `folder find <name>` / `find folder <name>` | Recursively search for folders by name                      | `folder find Documents`        |
+| `search <query>`                            | DuckDuckGo search                                           | `search Kali Linux tips`       |
+| `search google <query>`                     | Google search                                               | `search google kali wifi hack` |
+| `search url <site>` / `search site <site>`  | Open a specific website                                     | `search url github.com`        |
+| `tools all` / `show tools`                  | Show all terminal & GUI tools                               | `tools all`                    |
+| `terminal tools` / `show terminal tools`    | Show terminal-based tools                                   | `terminal tools`               |
+| `gui tools` / `show gui tools`              | Show GUI applications                                       | `gui tools`                    |
+| `check tool <name>`                         | Check if a specific tool is installed                       | `check tool nmap`              |
+| `open <file>`                               | Open and display contents of a file                         | `open todo.txt`                |
+| `history`                                   | Show full chat history                                      | `history`                      |
+| `history last <n>`                          | Show last `n` Q/A exchanges                                 | `history last 5`               |
+| `exit` / `quit`                             | Exit the chat assistant                                     | `exit`                         |
+
+
 > AI Terminal chooses **Gemini** when both Gemini and OpenAI keys are present in `~/.ait.yml` because Gemini’s free tier is cheaper.
 
 
