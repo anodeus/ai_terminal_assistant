@@ -100,14 +100,6 @@ These are stored in `~/.ait.yml`, not in a `.env` file.
 
 ## CLI Command Reference
 
-| Command | Description | Example |
-|---------|-------------|---------|
-| `./ait.py chat` | Interactive chat with the configured LLM (Gemini or OpenAI) | `./ait.py chat` |
-| `health` | Show system health (CPU, memory, battery, disk) | `health` |
-| `show ps` | List running processes | `show ps` |
-| `file find <pattern>` | Recursively search for files | `file find notes.txt` |
-| `search <query>` | DuckDuckGo quick search | `search Kali Linux tips` |
-
 | Command                                     | Description                                                 | Example                        |
 | ------------------------------------------- | ----------------------------------------------------------- | ------------------------------ |
 | `./ait.py chat`                             | Interactive chat with the configured LLM (Gemini or OpenAI) | `./ait.py chat`                |
