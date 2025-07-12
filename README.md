@@ -9,7 +9,7 @@ It acts as a lightweight assistant powered by OpenAI and Google Gemini — bundl
 
 ## Tech Stack
 
-**Client / CLI:** Python 3.9+, [Rich](https://rich.readthedocs.io), [argparse](https://docs.python.org/3/library/argparse.html)
+**Client / CLI:** [Python 3.9+](https://www.python.org/), [Rich](https://rich.readthedocs.io), [argparse](https://docs.python.org/3/library/argparse.html)
 
 **LLM Back‑ends:** [OpenAI API](https://platform.openai.com/), [Google AI Gemini](https://ai.google.dev/)
 
