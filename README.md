@@ -36,16 +36,10 @@ Install dependencies
 ```
 Try `bash install.sh` if `./install.sh` not work
 
-Give execute permissions
-
-```bash
-  chmod +x ait.py
-```
-
 Run Assistant
 
 ```bash
-  ./ait.py chat
+  ait chat
 ```
 
 
@@ -144,6 +138,24 @@ To create it:
 nano ~/.ait.yml
 
 ```
+##UNINSTALLING
+
+To completely remove the assistant from your system, type:
+
+```bash
+uninstall
+```
+This will:
+
+    Delete the virtual environment located at ~/.abhi_ai
+
+    Remove the launcher (/usr/local/bin/ait)
+
+    Ask whether to delete your API config file (~/.ait.yml)
+
+    Remove the cloned project directory (~/abhi_ai)
+
+ You will be prompted before anything important is deleted.
 ## Author
 
 - [@anodeus](https://www.github.com/anodeus)
