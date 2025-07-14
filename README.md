@@ -34,7 +34,7 @@ Install dependencies
 ```bash
   ./install.sh 
 ```
-Try `bash install.sh` if `./install.sh` not work
+>Try `bash install.sh` if `./install.sh` not work
 
 Run Assistant
 
@@ -56,7 +56,7 @@ Give permission to install dependencies if above command not work
 ```bash
   chmod +x install.sh
 ```
-Try `bash install.sh` if `./install.sh` not work
+>Try `bash install.sh` if `./install.sh` not work
 
 ## Configuration
 
@@ -135,7 +135,7 @@ You must save it in your **home directory**, not the project folder.
 To create it:
 
 ```bash
-nano ~/.ait.yml
+  nano ~/.ait.yml
 
 ```
 
