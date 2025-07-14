@@ -78,47 +78,83 @@
 # By Abhi Singh (anodeus)
 # ---------------------------------------------
 
+# echo "[*] Making ait/ait.py executable..."
+# chmod +x ait/ait.py
+
+# echo "[*] Creating Python virtual ai_environment 'aienv'..."
+# python3 -m venv aienv || { echo "[!] Failed to create virtualenv."; exit 1; }
+
+# echo "[*] Activating 'aienv'..."
+# source aienv/bin/activate || { echo "[!] Failed to activate virtualenv."; exit 1; }
+
+# echo "[*] Upgrading pip..."
+# pip install --upgrade pip
+
+# echo "[*] Installing dependencies from requirements.txt..."
+# pip install -r requirements.txt || { echo "[!] pip install failed."; deactivate; exit 1; }
+
+# # ---------------------------------------------
+# # Create /usr/local/bin/ait launcher (wrapper script)
+# # ---------------------------------------------
+# echo "[*] Creating CLI launcher at /usr/local/bin/ait ..."
+# cat <<EOF | sudo tee /usr/local/bin/ait >/dev/null
+# #!/bin/bash
+# # AI Terminal CLI wrapper
+
+# PROJECT_DIR="$(pwd)"
+# source "\$PROJECT_DIR/aienv/bin/activate"
+# python3 "\$PROJECT_DIR/ait/ait.py" "\$@"
+# EOF
+
+# sudo chmod +x /usr/local/bin/ait
+
+# # ---------------------------------------------
+# # Final Message
+# # ---------------------------------------------
+# echo ""
+# echo "[✔] AI Terminal Assistant Installed Successfully!"
+# echo "-------------------------------------------"
+# echo "To activate your environment manually:"
+# echo "  source aienv/bin/activate"
+# echo ""
+# echo "To run from anywhere, just type:"
+# echo "  ait chat"
+# echo ""
+# echo "Make sure your API keys are in: ~/.ait.yml"
+# echo "-------------------------------------------"
+#!/bin/bash
+
+# Define the absolute path for shared venv in home
+VENV_DIR="$HOME/aienv"
+
 echo "[*] Making ait/ait.py executable..."
 chmod +x ait/ait.py
 
-echo "[*] Creating Python virtual ai_environment 'aienv'..."
-python3 -m venv aienv || { echo "[!] Failed to create virtualenv."; exit 1; }
+echo "[*] Creating shared Python virtualenv at: $VENV_DIR"
+python3 -m venv "$VENV_DIR" || { echo "[!] Failed to create virtualenv."; exit 1; }
 
-echo "[*] Activating 'aienv'..."
-source aienv/bin/activate || { echo "[!] Failed to activate virtualenv."; exit 1; }
+echo "[*] Activating $VENV_DIR..."
+source "$VENV_DIR/bin/activate" || { echo "[!] Failed to activate virtualenv."; exit 1; }
 
 echo "[*] Upgrading pip..."
 pip install --upgrade pip
 
-echo "[*] Installing dependencies from requirements.txt..."
+echo "[*] Installing requirements..."
 pip install -r requirements.txt || { echo "[!] pip install failed."; deactivate; exit 1; }
 
-# ---------------------------------------------
-# Create /usr/local/bin/ait launcher (wrapper script)
-# ---------------------------------------------
 echo "[*] Creating CLI launcher at /usr/local/bin/ait ..."
-cat <<EOF | sudo tee /usr/local/bin/ait >/dev/null
+sudo tee /usr/local/bin/ait >/dev/null <<EOF
 #!/bin/bash
-# AI Terminal CLI wrapper
-
-PROJECT_DIR="$(pwd)"
-source "\$PROJECT_DIR/aienv/bin/activate"
-python3 "\$PROJECT_DIR/ait/ait.py" "\$@"
+source "$VENV_DIR/bin/activate"
+python3 "$(pwd)/ait/ait.py" "\$@"
 EOF
 
 sudo chmod +x /usr/local/bin/ait
 
-# ---------------------------------------------
-# Final Message
-# ---------------------------------------------
 echo ""
 echo "[✔] AI Terminal Assistant Installed Successfully!"
 echo "-------------------------------------------"
-echo "To activate your environment manually:"
-echo "  source aienv/bin/activate"
-echo ""
-echo "To run from anywhere, just type:"
-echo "  ait chat"
-echo ""
-echo "Make sure your API keys are in: ~/.ait.yml"
+echo "To activate manually: source ~/aienv/bin/activate"
+echo "Run anywhere using:  ait chat"
+echo "API keys should be in ~/.ait.yml"
 echo "-------------------------------------------"
