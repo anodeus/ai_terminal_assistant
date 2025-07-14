@@ -138,12 +138,14 @@ To create it:
 nano ~/.ait.yml
 
 ```
-##UNINSTALLING
+
+
+##  UNINSTALLING
 
 To completely remove the assistant from your system, type:
 
 ```bash
-uninstall
+  uninstall
 ```
 This will:
 
