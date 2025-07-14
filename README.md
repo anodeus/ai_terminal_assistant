@@ -96,7 +96,7 @@ These are stored in `~/.ait.yml`, not in a `.env` file.
 
 | Command                                     | Description                                          | Example                         |
 | ------------------------------------------- | ---------------------------------------------------- | ------------------------------- |
-| `./ait.py chat`                             | Launch Abhi AI (interactive CLI assistant) using LLM | `./ait.py chat`                 |
+| `ait chat`                                  | Launch Abhi AI (interactive CLI assistant) using LLM | `ait chat`                      |
 | `health` / `battery` / `sys`                | Show system diagnostics (CPU, memory, battery, disk) | `health`                        |
 | `show ps` / `ps scan`                       | List or scan running processes                       | `ps scan`                       |
 | `ip` / `show ip` / `ipv4` / `ipv6`          | Show network info like IP, gateway, DNS              | `ipv4`                          |
@@ -114,7 +114,7 @@ These are stored in `~/.ait.yml`, not in a `.env` file.
 | `history`                                   | Show full chat history                               | `history`                       |
 | `history last <n>`                          | Show last `n` Q\&A responses from chat               | `history last 3`                |
 | `exit` / `quit`                             | Exit Abhi AI chat assistant                          | `exit`                          |
-
+| `uninstall` / `remove assistant`            | Completely uninstall the assistant                   | `uninstall`                     |
 
 > AI Terminal chooses **Gemini** when both Gemini and OpenAI keys are present in `~/.ait.yml` because Gemini’s free tier is cheaper.
 
@@ -147,17 +147,8 @@ To completely remove the assistant from your system, type:
 ```bash
   uninstall
 ```
-This will:
-
-    Delete the virtual environment located at ~/.abhi_ai
-
-    Remove the launcher (/usr/local/bin/ait)
-
-    Ask whether to delete your API config file (~/.ait.yml)
-
-    Remove the cloned project directory (~/abhi_ai)
-
- You will be prompted before anything important is deleted.
+You’ll be asked for confirmation before anything important is deleted.
+No surprises — just a clean uninstall when you're ready.
 ## Author
 
 - [@anodeus](https://www.github.com/anodeus)
