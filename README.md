@@ -148,6 +148,7 @@ To completely remove the assistant from your system, type:
   uninstall
 ```
 You’ll be asked for confirmation before anything important is deleted.
+
 No surprises — just a clean uninstall when you're ready.
 ## Author
 
