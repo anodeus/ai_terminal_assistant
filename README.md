@@ -121,9 +121,32 @@ These are stored in `~/.ait.yml`, not in a `.env` file.
 
 ##  FAQ
 
+This can happen on systems like **Kali Linux** or others where `python3-venv` is missing or not executable by default.
+
+**Try this instead:**
+
+```bash
+bash install.sh
+```
+
+If that still fails:
+
+* Make sure `python3-venv` is installed:
+
+  ```bash
+  sudo apt install python3-venv
+  ```
+
+* Or follow the **manual installation** steps listed above.
+
+---
+
+
+
 ####  What if `./install.sh` fails?
 
 This usually happens on distros like Kali or when `python3-venv` is missing.
+
 
 **Fix:**  
 Install venv and run the manual setup.
