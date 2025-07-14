@@ -161,9 +161,9 @@ To completely remove the assistant from your system, type:
 ```bash
   uninstall
 ```
-You’ll be asked for confirmation before anything important is deleted.
+>You’ll be asked for confirmation before anything important is deleted.
 
-No surprises — just a clean uninstall when you're ready.
+>No surprises — just a clean uninstall when you're ready.
 ## Author
 
 - [@anodeus](https://www.github.com/anodeus)
