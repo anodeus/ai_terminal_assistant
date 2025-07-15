@@ -35,7 +35,8 @@ from typing import Dict, List
 from rich.console import Console
 import shutil
 from pathlib import Path
-
+import subprocess
+import os
 from modules import diagnostics, file_search, file_utils, folder_search, ip_info, process_scan, tool_opener, web_search, tools
 import config
 
@@ -437,14 +438,19 @@ def chat() -> None:
 # CLI entry
 # -----------------------------------------------------------------------
 def main() -> None:
-    parser = argparse.ArgumentParser(prog="ait", description="AI tesing Terminal Assistant developed by Abhi Singh")
+    parser = argparse.ArgumentParser(prog="ait", description="AI Terminal Assistant developed by Abhi Singh")
     subparsers = parser.add_subparsers(dest="cmd", required=True)
     subparsers.add_parser("chat", help="Start interactive chat assistant")
+    subparsers.add_parser("update", help="Update the AI Terminal Assistant")
 
     args = parser.parse_args()
 
     if args.cmd == "chat":
         chat()
+    
+    elif args.cmd == "update":
+        subprocess.run(["python3", os.path.expanduser("~/abhi_ai/update_runner.py")])
+
    
 if __name__ == "__main__":
     main()
