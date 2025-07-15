@@ -381,26 +381,31 @@ def chat() -> None:
             to_show = history_pairs[-count:] if count else history_pairs
 
             for i, (q, a) in enumerate(to_show, 1):
-                console.print(f"\n[bold cyan]🧑‍💻 Q{i}:[/bold cyan] {q}")
-                console.print(f"[bold blue]🤖 A{i}:[/bold blue] {a}")
+                console.print(f"\n[bold cyan] Q{i}:[/bold cyan] {q}")
+                console.print(f"[bold blue] A{i}:[/bold blue] {a}")
             continue
         
 
         #Unistalling my precious baby
         elif user.strip().lower() in {"uninstall", "uninstall assistant", "remove assistant"}:
-            confirm = input("⚠ Are you sure you want to uninstall AI Assistant? [y/N]: ").strip().lower()
+            confirm = input(" Are you sure you want to uninstall AI Assistant? [y/N]: ").strip().lower()
             if confirm != "y":
                 console.print("[yellow]Uninstall canceled.[/yellow]")
                 continue
 
             try:
-                console.print("[*] Removing virtual environment...")
+                console.print("[*] Removing launcher at /usr/local/bin/ait (requires sudo)...")
+                result = os.system("sudo rm -f /usr/local/bin/ait")
+
+                if result != 0:
+                    console.print("[red]✘ Failed to remove launcher. Wrong password or permission denied.[/red]")
+                    console.print("[yellow]Uninstall aborted to avoid deleting partial files.[/yellow]")
+                    continue
+                console.print("[green]✔ Launcher removed successfully.[/green]")
+
+                console.print("[*] Removing virtual environment at ~/.abhi_ai...")
                 shutil.rmtree(Path.home() / ".abhi_ai", ignore_errors=True)
 
-                console.print("[*] Removing launcher at /usr/local/bin/ait...")
-                os.system("sudo rm -f /usr/local/bin/ait")
-
-                # Ask about .ait.yml
                 yml_path = Path.home() / ".ait.yml"
                 if yml_path.exists():
                     remove_yml = input("Delete your API key config (~/.ait.yml)? [y/N]: ").strip().lower()
@@ -408,20 +413,24 @@ def chat() -> None:
                         try:
                             os.remove(yml_path)
                             console.print("[green]✔ .ait.yml deleted.[/green]")
-                        except:
+                        except Exception as e:
+                            console.print(f"[red]✘ Failed to delete .ait.yml: {e}[/red]")
                             console.print("[blue]✔ Keeping ~/.ait.yml[/blue]")
                     else:
                         console.print("[blue]✔ Keeping ~/.ait.yml[/blue]")
 
-                console.print("[*] Removing project folder...")
-                shutil.rmtree(Path.home() / "abhi_ai", ignore_errors=True)
+                project_path = Path.home() / "abhi_ai"
+                if project_path.exists():
+                    console.print("[*] Removing project folder at ~/abhi_ai...")
+                    shutil.rmtree(project_path, ignore_errors=True)
 
                 console.print("\n[green]✔ AI Assistant completely uninstalled.[/green]")
                 exit(0)
 
             except Exception as e:
-                console.print(f"[red]Uninstall failed unexpectedly.[/red]")
+                console.print(f"[red]Uninstall failed unexpectedly: {e}[/red]")
             continue
+
 
     
         # AI interaction
