@@ -437,7 +437,7 @@ def chat() -> None:
 # CLI entry
 # -----------------------------------------------------------------------
 def main() -> None:
-    parser = argparse.ArgumentParser(prog="ait", description="AI Terminal Assistant developed by Abhi Singh")
+    parser = argparse.ArgumentParser(prog="ait", description="AIII tesing Terminal Assistant developed by Abhi Singh")
     subparsers = parser.add_subparsers(dest="cmd", required=True)
     subparsers.add_parser("chat", help="Start interactive chat assistant")
 
