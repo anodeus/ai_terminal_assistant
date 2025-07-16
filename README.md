@@ -62,7 +62,7 @@ If any dependency fails to install, you can install it manually
 ```bash
   ~/.abhi_ai/bin/pip install <package-name>
 ```
->For example, if it says ModuleNotFoundError: No module named 'colorama', just run:
+>For example, if it says ModuleNotFoundError: No module named 'colorama'
 
 ## Configuration
 
