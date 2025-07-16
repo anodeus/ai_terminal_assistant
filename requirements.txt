@@ -10,6 +10,7 @@ google-generativeai
 
 # Terminal UI enhancements
 rich
+colorama
 
 # System monitoring
 psutil
