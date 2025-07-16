@@ -43,7 +43,7 @@ Run Assistant
 ```
 
 
-## Manual
+## Manual Setup Guide
 
 ```python
 python3 -m venv aienv
