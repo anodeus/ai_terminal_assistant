@@ -37,7 +37,7 @@ import shutil
 from pathlib import Path
 import subprocess
 import os
-from modules import diagnostics, file_search, file_utils, folder_search, ip_info, process_scan, tool_opener, web_search, tools
+from modules import diagnostics, file_search, file_utils, folder_search, ip_info, net_speed, process_scan, tool_opener, web_search, tools
 import config
 
 
@@ -359,8 +359,12 @@ def chat() -> None:
             console.print(result)
             continue
 
-            #Show history
+        #Including Local Speed Test
+        if net_speed.is_speed_test_query(user):
+            net_speed.run_full_speed_test()
+            continue
 
+        #Show history
         elif user.startswith("history"):
             parts = user.split()
             try:
