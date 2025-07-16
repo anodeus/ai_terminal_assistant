@@ -58,6 +58,12 @@ Give permission to install dependencies if above command not work
 ```
 >Try `bash install.sh` if `./install.sh` not work
 
+If any dependency fails to install, you can install it manually 
+```bash
+  ~/.abhi_ai/bin/pip install <package-name>
+```
+>For example, if it says ModuleNotFoundError: No module named 'colorama', just run:
+
 ## Configuration
 
 You need to add your `API_KEY` to a file named .ait.yml inside your home directory:
