@@ -117,6 +117,7 @@ These are stored in `~/.ait.yml`, not in a `.env` file.
 | `gui tools` / `show gui tools`              | List installed graphical (GUI) applications          | `gui tools`                     |
 | `check tool <name>`                         | Check if a specific tool is installed                | `check tool wireshark`          |
 | `open tool <name>`                          | Run a tool with optional arguments                   | `open tool nmap`                |
+| `net speed`/ `speed test`                   | Run full internet speed test                         | `speed test`                    |
 | `history`                                   | Show full chat history                               | `history`                       |
 | `history last <n>`                          | Show last `n` Q\&A responses from chat               | `history last 3`                |
 | `exit` / `quit`                             | Exit Abhi AI chat assistant                          | `exit`                          |

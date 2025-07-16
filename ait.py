@@ -89,6 +89,7 @@ def print_help_menu() -> None:
     console.print("- [blue]find file <name>[/blue]               → Find files starting with the given name")
     console.print("- [blue]find folder <name>[/blue]             → Find folders starting with the given name")
     console.print("- [blue]open <file>[/blue]                    → Open and view a specific file")
+    console.print("- [blue]net speed / speed test[/blue]         → Run full internet speed test (latency, jitter, download, loss)")
 
     console.print("\n[yellow] Web + Search Capabilities:[/yellow]")
     console.print("- [blue]search <query>[/blue]                 → Perform web search")
