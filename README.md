@@ -161,7 +161,7 @@ To create it:
 ```
 
 
-##  UNINSTALLING
+##  Uninstalling
 
 To completely remove the assistant from your system, type:
 
