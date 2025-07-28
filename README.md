@@ -41,6 +41,16 @@ Run Assistant
 ```bash
   ait chat
 ```
+##  Try AbhiGPT on Windows
+
+Using **Windows**?  
+You can skip the setup and use AbhiGPT instantly with the pre-built version.
+
+No Python. No dependencies. Just download and run.
+
+➡[Download from Releases](https://github.com/anodeus/ai_terminal_assistant/releases)
+
+> Recommended for Windows users who want a quick, hassle-free experience.
 
 
 ## Manual Setup Guide
