@@ -103,6 +103,7 @@ These are stored in `~/.ait.yml`, not in a `.env` file.
 | Command                                     | Description                                          | Example                         |
 | ------------------------------------------- | ---------------------------------------------------- | ------------------------------- |
 | `ait chat`                                  | Launch Abhi AI (interactive CLI assistant) using LLM | `ait chat`                      |
+| `ait update`                                | Check for the latest version & update AbhiGPT safely | `ait update`                    |
 | `health` / `battery` / `sys`                | Show system diagnostics (CPU, memory, battery, disk) | `health`                        |
 | `show ps` / `ps scan`                       | List or scan running processes                       | `ps scan`                       |
 | `ip` / `show ip` / `ipv4` / `ipv6`          | Show network info like IP, gateway, DNS              | `ipv4`                          |
