@@ -46,8 +46,8 @@ Run Assistant
 ## Manual Setup Guide
 
 ```python
-python3 -m venv aienv
-source aienv/bin/activate
+python3 -m venv abhi_ai
+source abhi_ai/bin/activate
 pip install -r requirements.txt
 chmod +x ait.py
 ./ait.py chat
@@ -74,12 +74,12 @@ You need to add your `API_KEY` to a file named .ait.yml inside your home directo
 Then paste:
 ```bash
   # ~/.ait.yml
-
+  provider: gemini
   gemini_api_key: "your‑gemini‑key"
   gemini_model: "gemini-1.5-flash"
 
   # default gemini
-
+  #provider: openai
   #openai_api_key: "your‑openai‑key"
   #openai_model: "gpt-3.5-turbo"
 ```
