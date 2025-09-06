@@ -3,7 +3,11 @@
 
 
 **AI Terminal** is a command-line AI utility developed by **Abhi Singh** (`@anodeus`).  
-It acts as a lightweight assistant powered by OpenAI and Google Gemini — bundled with system tools like process scanning, diagnostics, file search, and optional web search.
+It acts as a lightweight assistant powered by OpenAI and Google Gemini for Kali Linux, helping users interact with their system efficiently. Bundled with system tools like process scanning, diagnostics, file search, and optional web search.
+
+- **Chat with AI**: Ask questions or get guidance directly in the terminal.  
+- **System interaction**: Retrieve system info, search files/folders, and manage tools.  
+- **Automation of tools**: Automatically run or control any compatible tool available in Kali Linux, saving time and simplifying workflows.
 
 
 
